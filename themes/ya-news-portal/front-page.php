@@ -5,6 +5,9 @@
    <div class="hero-wrap style-one pt-70 pb-70">
       <div class="container">
          <div class="row">
+
+
+
             <div class="col-xl-8">
                <div class="news-card style-one position-relative index-1 round-5 mb-30">
                   <div
@@ -27,6 +30,9 @@
                   </div>
                </div>
             </div>
+
+
+
             <div class="col-xl-4 pe-xl-1">
                <div class="thumb-news-wrapper mb-30">
                   <h5 class="section-subtitle fw-semibold lh-1">Latest Posts</h5>
@@ -92,6 +98,11 @@
                   </div>
                </div>
             </div>
+
+
+
+
+
          </div>
       </div>
    </div>
