@@ -38,13 +38,13 @@
             <div class="row align-items-center">
                <div class="col-lg-2 col-md-4">
                   <ul class="social-profile style-one list-unstyled">
-                     <li><a href="https://www.facebook.com/" target="_blank"><img
+                     <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details2')) ?>" target="_blank"><img
                               src="<?php echo get_template_directory_uri() ?>/assets/img/icons/facebook-blue.svg" alt="Facebook"></a></li>
-                     <li><a href="https://www.pinterest.com/" target="_blank"><img
+                     <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details4')) ?>" target="_blank"><img
                               src="<?php echo get_template_directory_uri() ?>/assets/img/icons/pinterest-blue.svg" alt="Pinterest"></a></li>
-                     <li><a href="https://www.instagram.com/" target="_blank"><img
+                     <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details5')) ?>" target="_blank"><img
                               src="<?php echo get_template_directory_uri() ?>/assets/img/icons/instagram-blue.svg" alt="Instagram"></a></li>
-                     <li><a href="https://x.com/?lang=en" target="_blank"><img
+                     <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details3')) ?>" target="_blank"><img
                               src="<?php echo get_template_directory_uri() ?>/assets/img/icons/twitter-blue.svg" alt="Icon"></a></li>
                   </ul>
                </div>

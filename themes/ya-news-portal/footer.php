@@ -32,20 +32,17 @@
        <div class="footer-bottom">
           <div class="row align-items-center">
              <div class="col-md-8 pe-xxl-5">
-                <p class="copyright-text text-offwhite fs-15 mb-0"><span class="text-white">Copyright:</span>
-                   Any unauthorized use or reproduction of <span class="text-white">Renaz</span> content for
-                   commercial purposes is strictly prohibited and constitutes copyright infringement liable to
-                   legal action.</p>
+                <p class="copyright-text text-offwhite fs-15 mb-0"><span class="text-white"><?php echo esc_html(get_theme_mod('setting_site_details1')); ?></p>
              </div>
              <div class="col-md-4">
                 <ul class="social-profile style-one text-md-end list-unstyled">
-                   <li><a href="https://www.facebook.com/" target="_blank"><i class="ri-facebook-fill"></i></a>
+                   <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details2')) ?>" target="_blank"><i class="ri-facebook-fill"></i></a>
                    </li>
-                   <li><a href="https://www.pinterest.com/" target="_blank"><i
+                   <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details4')) ?>" target="_blank"><i
                             class="ri-pinterest-fill"></i></a></li>
-                   <li><a href="https://www.instagram.com/" target="_blank"><i
+                   <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details5')) ?>" target="_blank"><i
                             class="ri-instagram-line"></i></a></li>
-                   <li><a href="https://x.com/?lang=en" target="_blank"><i class="ri-twitter-x-line"></i></a>
+                   <li><a href="<?php echo esc_url(get_theme_mod('setting_site_details3')) ?>" target="_blank"><i class="ri-twitter-x-line"></i></a>
                    </li>
                 </ul>
              </div>
