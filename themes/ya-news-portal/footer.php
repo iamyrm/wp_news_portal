@@ -5,26 +5,40 @@
           <div class="row">
              <div class="col-lg-4 mb-md-15">
                 <div class="footer-widget">
-                   <a href="index.html" class="logo d-block"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-white.png"
-                         alt="Logo"></a>
-                   <ul class="footer-menu style-one list-unstyled">
-                      <li><a href="featured-news.html">Honest</a></li>
-                      <li><a href="featured-news.html">Journalism</a></li>
-                      <li><a href="featured-news.html">Bravery</a></li>
-                   </ul>
+                   <a href="<?php echo esc_url(home_url('/')); ?>" class="logo d-block">
+                      <?php if ((has_custom_logo())) {
+                           $custom_logo_id = get_theme_mod('custom_logo');
+                           $logo = wp_get_attachment_image_src($custom_logo_id, 'custom-logo-size');
+                        ?>
+                         <img src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo esc_html(bloginfo('name')); ?>">
+                      <?php
+                        } else {
+                        ?>
+                         <h1 class="section-subtitle fw-semibold lh-1 text-white"><?php echo esc_html(bloginfo('name')); ?></h1>
+                      <?php
+                        } ?>
+                   </a>
+                   <?php
+                     wp_nav_menu(array(
+                        'theme_location' => 'footer-menu-1',
+                        'menu_class'     => 'footer-menu style-one list-unstyled',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                     ));
+                     ?>
+
                 </div>
              </div>
              <div class="col-lg-8">
                 <div class="footer-widget">
-                   <ul
-                      class="footer-menu style-two list-unstyled d-flex flex-wrap align-items-center justify-content-lg-end">
-                      <li><a href="about-us.html">About Us</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="my-account.html">Subscribe</a></li>
-                      <li><a href="blog-left-sidebar.html">Podcast</a></li>
-                      <li><a href="blog-right-sidebar.html">Video</a></li>
-                      <li><a href="latest-news.html">Long News</a></li>
-                   </ul>
+                   <?php
+                     wp_nav_menu(array(
+                        'theme_location' => 'footer-menu-2',
+                        'menu_class'     => 'footer-menu style-two list-unstyled d-flex flex-wrap align-items-center justify-content-lg-end',
+                        'container'      => false,
+                        'fallback_cb'    => false,
+                     ));
+                     ?>
                 </div>
              </div>
           </div>
@@ -78,7 +92,7 @@
              <div class="newsletter-bg bg-f"></div>
              <div class="newsletter-content d-flex flex-column justify-content-center">
                 <h2 class="fs-36 ls-3">Join Our Newsletter &amp; Read The New Posts First</h2>
-                <form action="index.html#" class="newsletter-form">
+                <form action="<?php echo esc_url(home_url('/')); ?>#" class="newsletter-form">
                    <input type="email" placeholder="Email Address">
                    <button type="button" class="btn style-one">Subscribe<i
                          class="flaticon-arrow-right"></i></button>

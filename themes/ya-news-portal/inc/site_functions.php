@@ -33,3 +33,20 @@ function addHeaderDetails()
    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri() ?>/assets/img/favicon.png">
 <?php
 }
+
+
+add_action('after_setup_theme', 'yanews_after_theme_setup');
+function yanews_after_theme_setup()
+{
+   // Adding Menus
+   register_nav_menus(array('footer-menu-1' => esc_html__('Footer Menu 1', 'yanews')));
+   register_nav_menus(array('footer-menu-2' => esc_html__('Footer Menu 2', 'yanews')));
+}
+
+// Limit footer-menu-1 to show only 3 items
+add_filter('wp_nav_menu_objects', function ($sorted_menu_items, $args) {
+   if (isset($args->theme_location) && $args->theme_location === 'footer-menu-1') {
+      $sorted_menu_items = array_slice($sorted_menu_items, 0, 3);
+   }
+   return $sorted_menu_items;
+}, 10, 2);

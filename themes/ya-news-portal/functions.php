@@ -13,11 +13,13 @@ function yanews_setup()
    add_theme_support('html5', array('search-form', 'navigation-widgets'));
    add_theme_support('appearance-tools');
    add_theme_support('woocommerce');
-   global $content_width;
-   if (!isset($content_width)) {
-      $content_width = 1920;
-   }
-   register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'yanews')));
+   add_theme_support('custom-logo', array(
+      'height'      => 36,
+      'width'       => 134,
+      'flex-height' => true,
+      'flex-width'  => true,
+   ));
+   add_image_size('custom-logo-size', 134, 36, false);
 }
 
 add_action('wp_footer', 'yanews_footer');
