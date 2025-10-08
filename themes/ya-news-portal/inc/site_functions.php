@@ -39,6 +39,7 @@ add_action('after_setup_theme', 'yanews_after_theme_setup');
 function yanews_after_theme_setup()
 {
    // Adding Menus
+   register_nav_menus(array('header-menu' => esc_html__('Header Menu', 'yanews')));
    register_nav_menus(array('footer-menu-1' => esc_html__('Footer Menu 1', 'yanews')));
    register_nav_menus(array('footer-menu-2' => esc_html__('Footer Menu 2', 'yanews')));
 }

@@ -1,6 +1,8 @@
 <?php
 require 'inc/site_functions.php';
 require 'inc/customizer.php';
+require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php';
+
 
 add_action('after_setup_theme', 'yanews_setup');
 function yanews_setup()
