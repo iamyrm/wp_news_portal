@@ -22,6 +22,9 @@ function yanews_setup()
       'flex-width'  => true,
    ));
    add_image_size('custom-logo-size', 134, 36, false);
+   add_image_size('homepage-hero-img', 985, 615, false);
+   add_image_size('homepage-business-img', 448, 255, false);
+   add_image_size('homepage-tab-img', 680, 400, false);
 }
 
 add_action('wp_footer', 'yanews_footer');
