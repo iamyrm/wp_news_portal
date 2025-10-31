@@ -1,6 +1,7 @@
 <?php
 require 'inc/site_functions.php';
 require 'inc/customizer.php';
+require 'inc/subscribe_function.php';
 require_once get_template_directory() . '/inc/class-bootstrap-navwalker.php';
 
 

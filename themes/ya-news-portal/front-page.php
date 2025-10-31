@@ -1,44 +1,26 @@
 <?php get_header(); ?>
 
 <div class="bg-optional">
-   <!-- Hero Section Start -->
-   <?php get_template_part('parts/home/hero', 'section'); ?>
-   <!-- Hero Section End -->
+   <?php
+   // Hero Section Start
+   get_template_part('parts/home/hero', 'section');
+   // Hero Section End 
 
-   <!-- Business Posts Start -->
-   <?php get_template_part('parts/home/business', 'section'); ?>
-   <!-- Business Posts End -->
+   // Business Posts Start 
+   get_template_part('parts/home/business', 'section');
+   //   Business Posts End 
+   ?>
 </div>
 
-<!-- Tab Section / New Stories Section Start -->
-<?php get_template_part('parts/home/tab', 'section'); ?>
-<!-- Tab Section / New Stories Section End -->
+<?php
+//  Tab Section / New Stories Section Start 
+get_template_part('parts/home/tab', 'section');
+//  Tab Section / New Stories Section End 
 
-<!-- Subscribe Section Start -->
-<div class="container">
-   <div class="subscribe-box style-one position-relative index-1">
-      <div class="row justify-content-center">
-         <div class="col-lg-4">
-            <div class="subscribe-img">
-               <img src="<?php echo get_template_directory_uri() ?>/assets/img/subscribe.jpg" alt="Image">
-            </div>
-         </div>
-         <div class="col-lg-8">
-            <div class="subscribe-content">
-               <h3 class="fs-26 fw-medium text-white ls-5 xmb-5">Subscribe for updates</h3>
-               <p class="text-white fw-light mb-25">This year has been a whirlwind of drama and controversy in
-                  the world.</p>
-               <form action="index.html#" class="subscribe-form position-relative">
-                  <input type="email" placeholder="Enter your email" class="w-100">
-                  <button class="btn style-three fw-semibold">Subscribe Now <img
-                        src="<?php echo get_template_directory_uri() ?>/assets/img/icons/long-arrow-black.svg" alt="Arrow"></button>
-               </form>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<!-- Subscribe Section End -->
+//  Subscribe Section Start 
+get_template_part('parts/home/subscribe', 'cta');
+// Subscribe Section End 
+?>
 
 <!-- Main Topics Start -->
 <div class="container pt-100 pb-70">

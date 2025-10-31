@@ -75,11 +75,13 @@
                                           class="md-d-none">Watch</span></a></li>
                               </ul>
                            </div>
-                           <div class="option-item">
+
+                           <?php /* <div class="option-item">
                               <button class="btn style-three fw-semibold" data-bs-toggle="modal"
                                  data-bs-target="#newsletter-popup">Subscribe Now <img
                                     src="<?php echo get_template_directory_uri() ?>/assets/img/icons/long-arrow-black.svg" alt="Arrow"></button>
                            </div>
+                           */ ?>
                         </div>
                      </div>
                   </nav>

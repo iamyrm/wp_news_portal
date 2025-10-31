@@ -51,3 +51,18 @@ add_filter('wp_nav_menu_objects', function ($sorted_menu_items, $args) {
    }
    return $sorted_menu_items;
 }, 10, 2);
+
+// Redirect subscribers to the frontend if they try to access admin panel
+add_action('admin_init', function () {
+   if (current_user_can('subscriber') && !wp_doing_ajax()) {
+      wp_redirect(home_url());
+      exit;
+   }
+});
+
+// Hide admin header bar for non editors
+add_action('after_setup_theme', function () {
+   if (!current_user_can('edit_posts')) {
+      show_admin_bar(false);
+   }
+});
